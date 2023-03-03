@@ -1,27 +1,27 @@
 data = JSON.parse(localStorage.getItem("Poll"))
 document.querySelector("#nhuquynh").innerHTML = data["NhuQuynh"]
-document.querySelector("#minhhang").innerHTML = data["MinhHang"]
-document.querySelector("#thuyhong").innerHTML = data["ThuyHong"]
+document.querySelector("#nguyenchau").innerHTML = data["NguyenChau"]
+document.querySelector("#minhtrang").innerHTML = data["MinhTrang"]
 
-let long = {
+let nhk = {
     "NhuQuynh": 0,
-    "MinhHang": 0,
-    "ThuyHong": 0
+    "NguyenChau": 0,
+    "MinhTrang": 0
 }
 
-let array = [data["NhuQuynh"], data["MinhHang"], data["ThuyHong"]]
+let array = [data["NhuQuynh"], data["NguyenChau"], data["MinhTrang"]]
 let max = Math.max.apply(null, array)
 
 if(max == data["NhuQuynh"]){
     document.querySelector(".winner").innerHTML = "Nhu Quynh"
-} else if(max == data["MinhHang"]){
-    document.querySelector(".winner").innerHTML = "Minh Hang"
-} else if(max == data["ThuyHong"]) {
-    document.querySelector(".winner").innerHTML = "Thuy Hong"
+} else if(max == data["NguyenChau"]){
+    document.querySelector(".winner").innerHTML = "Nguyen Chau"
+} else if(max == data["MinhTrang"]) {
+    document.querySelector(".winner").innerHTML = "Minh Trang"
 }
 
 document.querySelector(".prestige").addEventListener("click", (e) => {
-    localStorage.setItem("Poll", JSON.stringify(long))
+    localStorage.setItem("Poll", JSON.stringify(nhk))
     alert("Done!")
     window.location.href = './index.html'
 })
