@@ -1,14 +1,14 @@
 // fetch data
 let data = localStorage.getItem("Poll")
-let long = {
+let nhk = {
     "NhuQuynh": 0,
-    "MinhHang": 0,
-    "ThuyHong": 0
+    "NguyenChau": 0,
+    "MinhTrang": 0
 }
 if(data){
-    long = JSON.parse(data)
+    nhk = JSON.parse(data)
 } else {
-    localStorage.setItem("Poll", JSON.stringify(long))
+    localStorage.setItem("Poll", JSON.stringify(nhk))
 }
 
 // poll
@@ -24,16 +24,16 @@ lon1.addEventListener("click", () => {
 })
 
 lon2.addEventListener("click", () => {
-    long["MinhHang"] += 1
+    long["NguyenChau"] += 1
     localStorage.setItem("Poll", JSON.stringify(long))
-    // alert("You have voted for Minh Hang!!!!")
+    // alert("You have voted for Nguyen Chau!!!!")
     document.querySelector("#result").classList.remove("hidden")
 })
 
 lon3.addEventListener("click", () => {
-    long["ThuyHong"] += 1
+    long["MinhTrang"] += 1
     localStorage.setItem("Poll", JSON.stringify(long))
-    // alert("You have voted for Thuy Hong!!!!!")
+    // alert("You have voted for Minh Trang!!!!!")
     document.querySelector("#result").classList.remove("hidden")
 })
 
