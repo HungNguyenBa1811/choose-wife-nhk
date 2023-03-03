@@ -17,22 +17,22 @@ let lon2 = document.querySelector(".lon2")
 let lon3 = document.querySelector(".lon3")
 
 lon1.addEventListener("click", () => {
-    long["NhuQuynh"] += 1
-    localStorage.setItem("Poll", JSON.stringify(long))
+    nhk["NhuQuynh"] += 1
+    localStorage.setItem("Poll", JSON.stringify(nhk))
     // alert("You have voted for Nhu Quynh!!!")
     document.querySelector("#result").classList.remove("hidden")
 })
 
 lon2.addEventListener("click", () => {
-    long["NguyenChau"] += 1
-    localStorage.setItem("Poll", JSON.stringify(long))
+    nhk["NguyenChau"] += 1
+    localStorage.setItem("Poll", JSON.stringify(nhk))
     // alert("You have voted for Nguyen Chau!!!!")
     document.querySelector("#result").classList.remove("hidden")
 })
 
 lon3.addEventListener("click", () => {
-    long["MinhTrang"] += 1
-    localStorage.setItem("Poll", JSON.stringify(long))
+    nhk["MinhTrang"] += 1
+    localStorage.setItem("Poll", JSON.stringify(nhk))
     // alert("You have voted for Minh Trang!!!!!")
     document.querySelector("#result").classList.remove("hidden")
 })
